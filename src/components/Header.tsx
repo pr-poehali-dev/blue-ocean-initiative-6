@@ -1,25 +1,26 @@
 interface HeaderProps {
   className?: string;
+  onOrderClick?: () => void;
 }
 
-export default function Header({ className }: HeaderProps) {
+export default function Header({ className, onOrderClick }: HeaderProps) {
   return (
     <header className={`absolute top-0 left-0 right-0 z-10 p-6 ${className ?? ""}`}>
       <div className="flex justify-between items-center">
         <div className="text-white text-sm uppercase tracking-wide font-semibold">Apple Store</div>
-        <nav className="flex gap-8">
+        <nav className="flex gap-8 items-center">
           <a
             href="#catalog"
             className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm"
           >
             Каталог
           </a>
-          <a
-            href="#contact"
-            className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm"
+          <button
+            onClick={onOrderClick}
+            className="text-white border border-white px-4 py-1.5 uppercase text-sm hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
           >
-            Связаться
-          </a>
+            Заявка
+          </button>
         </nav>
       </div>
     </header>

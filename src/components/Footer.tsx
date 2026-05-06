@@ -1,4 +1,8 @@
-export default function Footer() {
+interface FooterProps {
+  onOrderClick?: () => void;
+}
+
+export default function Footer({ onOrderClick }: FooterProps) {
   return (
     <div
       className="relative h-[400px] sm:h-[600px] lg:h-[800px] max-h-[800px]"
@@ -55,7 +59,15 @@ export default function Footer() {
               <h1 className="text-[18vw] sm:text-[16vw] lg:text-[14vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
                 APPLE
               </h1>
-              <p className="text-white text-sm sm:text-base">{new Date().getFullYear()} Apple Store</p>
+              <div className="flex flex-col items-end gap-3">
+                <button
+                  onClick={onOrderClick}
+                  className="border border-white text-white px-6 py-2 text-sm uppercase tracking-wide hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+                >
+                  Оставить заявку
+                </button>
+                <p className="text-white text-sm sm:text-base">{new Date().getFullYear()} Apple Store</p>
+              </div>
             </div>
           </div>
         </div>

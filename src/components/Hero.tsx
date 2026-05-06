@@ -1,7 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  onOrderClick: () => void;
+}
+
+export default function Hero({ onOrderClick }: HeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -32,12 +36,20 @@ export default function Hero() {
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
           Оригинальная техника Apple с официальной гарантией. Доставка по всей России.
         </p>
-        <a
-          href="#catalog"
-          className="mt-8 inline-block border border-white text-white px-8 py-3 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300"
-        >
-          Смотреть каталог
-        </a>
+        <div className="flex gap-4 justify-center mt-8 flex-wrap px-6">
+          <a
+            href="#catalog"
+            className="border border-white text-white px-8 py-3 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300"
+          >
+            Смотреть каталог
+          </a>
+          <button
+            onClick={onOrderClick}
+            className="bg-white text-black px-8 py-3 uppercase text-sm tracking-wide hover:bg-neutral-200 transition-all duration-300 cursor-pointer"
+          >
+            Оставить заявку
+          </button>
+        </div>
       </div>
     </div>
   );
