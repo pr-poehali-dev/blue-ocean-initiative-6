@@ -9,55 +9,34 @@ export default function Footer({ onOrderClick }: FooterProps) {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="relative h-[calc(100vh+400px)] sm:h-[calc(100vh+600px)] lg:h-[calc(100vh+800px)] -top-[100vh]">
-        <div className="h-[400px] sm:h-[600px] lg:h-[800px] sticky top-[calc(100vh-400px)] sm:top-[calc(100vh-600px)] lg:top-[calc(100vh-800px)]">
+        <div className="h-[400px] sm:h-[600px] lg:h-[800px] sticky top-[calc(100vh-400px)] sm:top[calc(100vh-600px)] lg:top-[calc(100vh-800px)]">
           <div className="bg-neutral-900 py-4 sm:py-6 lg:py-8 px-4 sm:px-6 h-full w-full flex flex-col justify-between">
             <div className="flex shrink-0 gap-8 sm:gap-12 lg:gap-20">
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Каталог</h3>
-                <a
-                  href="#iphone"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  iPhone
-                </a>
-                <a
-                  href="#mac"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Mac
-                </a>
-                <a
-                  href="#ipad"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  iPad
-                </a>
+                <a href="#iphone" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">iPhone</a>
+                <a href="#mac" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Mac</a>
+                <a href="#ipad" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">iPad</a>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Покупателям</h3>
-                <a
-                  href="#delivery"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Доставка
+                <a href="#delivery" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Доставка</a>
+                <a href="#warranty" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Гарантия</a>
+                <a href="#contact" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Контакты</a>
+              </div>
+              <div className="flex flex-col gap-1 sm:gap-2">
+                <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Контакты</h3>
+                <a href="tel:89210287878" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">
+                  8 921 028 78 78
                 </a>
-                <a
-                  href="#warranty"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Гарантия
-                </a>
-                <a
-                  href="#contact"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Контакты
-                </a>
+                <p className="text-neutral-400 text-sm sm:text-base leading-snug">
+                  г. Боровичи,<br />ул. Рабочая, д. 13
+                </p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
               <h1 className="text-[18vw] sm:text-[16vw] lg:text-[14vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
-                APPLE
+                BIZ SHOP
               </h1>
               <div className="flex flex-col items-end gap-3">
                 <button
@@ -66,7 +45,7 @@ export default function Footer({ onOrderClick }: FooterProps) {
                 >
                   Оставить заявку
                 </button>
-                <p className="text-white text-sm sm:text-base">{new Date().getFullYear()} Apple Store</p>
+                <p className="text-neutral-400 text-sm sm:text-base">{new Date().getFullYear()} Biz Shop</p>
               </div>
             </div>
           </div>
