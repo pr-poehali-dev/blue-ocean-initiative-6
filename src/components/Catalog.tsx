@@ -28,10 +28,10 @@ const products = [
   { id: 17, category: "iPad",   name: "iPad Air 13",       description: "Чип M2. Retina. 128 ГБ. Wi-Fi.", price: "99 990 ₽", image: ipad },
   { id: 18, category: "iPad",   name: "iPad Air 11",       description: "Чип M2. Retina. 128 ГБ. Wi-Fi + Cellular.", price: "79 990 ₽", image: ipad },
   { id: 19, category: "iPad",   name: "iPad 10",           description: "Чип A14. 64 ГБ. Wi-Fi. USB-C.", price: "49 990 ₽", image: ipad },
-  { id: 20, category: "Watch",  name: "Apple Watch Ultra 2", description: "Titanium. GPS + Cellular. Для экстрима.", price: "89 990 ₽", image: iphone },
-  { id: 21, category: "Watch",  name: "Apple Watch Series 10", description: "Алюминий. GPS. OLED-дисплей.", price: "44 990 ₽", image: iphone },
-  { id: 22, category: "AirPods", name: "AirPods Pro 2",   description: "ANC. Адаптивный звук. USB-C.", price: "24 990 ₽", image: iphone },
-  { id: 23, category: "AirPods", name: "AirPods 4",       description: "Активное шумоподавление. USB-C.", price: "16 990 ₽", image: iphone },
+  { id: 20, category: "Watch",  name: "Apple Watch Ultra 2", description: "Titanium. GPS + Cellular. Для экстрима.", price: "89 990 ₽", image: iphone17pro },
+  { id: 21, category: "Watch",  name: "Apple Watch Series 10", description: "Алюминий. GPS. OLED-дисплей.", price: "44 990 ₽", image: iphone17 },
+  { id: 22, category: "AirPods", name: "AirPods Pro 2",   description: "ANC. Адаптивный звук. USB-C.", price: "24 990 ₽", image: iphone17 },
+  { id: 23, category: "AirPods", name: "AirPods 4",       description: "Активное шумоподавление. USB-C.", price: "16 990 ₽", image: iphone17 },
 ];
 
 const categories = ["Все", "iPhone", "Mac", "iPad", "Watch", "AirPods"];
