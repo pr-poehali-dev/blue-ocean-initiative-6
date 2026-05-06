@@ -19,19 +19,25 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/images/mountain-landscape.jpg"
-          alt="Mountain landscape"
+          src="https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/dc4ea070-1c93-47fa-afd5-7e4f6c493c9a.jpg"
+          alt="Apple Store"
           className="w-full h-full object-cover"
         />
       </motion.div>
 
       <div className="relative z-10 text-center text-white">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          ОТКРОЙ
+          APPLE
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Исследуй границы дизайна с иммерсивным параллакс-эффектом
+          Оригинальная техника Apple с официальной гарантией. Доставка по всей России.
         </p>
+        <a
+          href="#catalog"
+          className="mt-8 inline-block border border-white text-white px-8 py-3 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300"
+        >
+          Смотреть каталог
+        </a>
       </div>
     </div>
   );
