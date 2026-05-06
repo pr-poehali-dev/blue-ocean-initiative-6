@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface FooterProps {
   onOrderClick?: () => void;
 }
@@ -22,7 +24,7 @@ export default function Footer({ onOrderClick }: FooterProps) {
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Покупателям</h3>
                 <a href="#delivery" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Доставка</a>
                 <a href="#warranty" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Гарантия</a>
-                <a href="#contact" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Контакты</a>
+                <Link to="/trade-in" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Trade-In</Link>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Контакты</h3>

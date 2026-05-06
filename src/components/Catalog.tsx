@@ -1,58 +1,37 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
+const iphone = "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/80ab08b9-172e-43bc-9ba3-5bcbe02fe35b.jpg";
+const mac = "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/9a8b6b55-a4ab-4b32-ba83-ff4fe1b5b86e.jpg";
+const ipad = "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/42551c53-d762-43db-a67e-4a152e1351cc.jpg";
+
 const products = [
-  {
-    id: 1,
-    category: "iPhone",
-    name: "iPhone 16 Pro",
-    description: "Titanium. Чип A18 Pro. Камера 48 Мп с оптическим зумом 5x.",
-    price: "119 990 ₽",
-    image: "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/80ab08b9-172e-43bc-9ba3-5bcbe02fe35b.jpg",
-  },
-  {
-    id: 2,
-    category: "iPhone",
-    name: "iPhone 16",
-    description: "Чип A18. Dynamic Island. Зарядка USB-C. 128 ГБ.",
-    price: "89 990 ₽",
-    image: "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/80ab08b9-172e-43bc-9ba3-5bcbe02fe35b.jpg",
-  },
-  {
-    id: 3,
-    category: "Mac",
-    name: "MacBook Pro 16",
-    description: "Чип M4 Pro. 24 ГБ RAM. 512 ГБ SSD. До 24 часов работы.",
-    price: "249 990 ₽",
-    image: "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/9a8b6b55-a4ab-4b32-ba83-ff4fe1b5b86e.jpg",
-  },
-  {
-    id: 4,
-    category: "Mac",
-    name: "MacBook Air 13",
-    description: "Чип M3. 8 ГБ RAM. 256 ГБ SSD. Тонкий и лёгкий.",
-    price: "119 990 ₽",
-    image: "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/9a8b6b55-a4ab-4b32-ba83-ff4fe1b5b86e.jpg",
-  },
-  {
-    id: 5,
-    category: "iPad",
-    name: "iPad Pro 13",
-    description: "Чип M4. OLED-дисплей. Поддержка Apple Pencil Pro.",
-    price: "149 990 ₽",
-    image: "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/42551c53-d762-43db-a67e-4a152e1351cc.jpg",
-  },
-  {
-    id: 6,
-    category: "iPad",
-    name: "iPad Air 11",
-    description: "Чип M2. Retina-дисплей. 128 ГБ. Wi-Fi + Cellular.",
-    price: "79 990 ₽",
-    image: "https://cdn.poehali.dev/projects/523e121c-50a7-41ad-9dbb-8a4040ceae25/files/42551c53-d762-43db-a67e-4a152e1351cc.jpg",
-  },
+  { id: 1,  category: "iPhone", name: "iPhone 17 Pro Max", description: "Чип A19 Pro. Titanium. Камера 5x. 256 ГБ.", price: "149 990 ₽", image: iphone },
+  { id: 2,  category: "iPhone", name: "iPhone 17 Pro",     description: "Чип A19 Pro. Titanium. Dynamic Island. 128 ГБ.", price: "129 990 ₽", image: iphone },
+  { id: 3,  category: "iPhone", name: "iPhone 17",         description: "Чип A19. Алюминий. 128 ГБ. USB-C.", price: "99 990 ₽", image: iphone },
+  { id: 4,  category: "iPhone", name: "iPhone 16 Pro Max", description: "Чип A18 Pro. Titanium. Зум 5x. 256 ГБ.", price: "134 990 ₽", image: iphone },
+  { id: 5,  category: "iPhone", name: "iPhone 16 Pro",     description: "Чип A18 Pro. Titanium. Камера 48 Мп. 128 ГБ.", price: "119 990 ₽", image: iphone },
+  { id: 6,  category: "iPhone", name: "iPhone 16",         description: "Чип A18. Dynamic Island. USB-C. 128 ГБ.", price: "89 990 ₽", image: iphone },
+  { id: 7,  category: "iPhone", name: "iPhone 15 Pro Max", description: "Чип A17 Pro. Titanium. Зум 5x. 256 ГБ.", price: "109 990 ₽", image: iphone },
+  { id: 8,  category: "iPhone", name: "iPhone 15 Pro",     description: "Чип A17 Pro. Titanium. USB-C. 128 ГБ.", price: "94 990 ₽", image: iphone },
+  { id: 9,  category: "iPhone", name: "iPhone 15",         description: "Чип A16. Dynamic Island. USB-C. 128 ГБ.", price: "74 990 ₽", image: iphone },
+  { id: 10, category: "iPhone", name: "iPhone 14",         description: "Чип A15. Super Retina XDR. 128 ГБ.", price: "59 990 ₽", image: iphone },
+  { id: 11, category: "Mac",    name: "MacBook Pro 16",    description: "Чип M4 Pro. 24 ГБ RAM. 512 ГБ SSD. До 24 ч.", price: "249 990 ₽", image: mac },
+  { id: 12, category: "Mac",    name: "MacBook Pro 14",    description: "Чип M4 Pro. 24 ГБ RAM. 512 ГБ SSD.", price: "219 990 ₽", image: mac },
+  { id: 13, category: "Mac",    name: "MacBook Air 15",    description: "Чип M3. 8 ГБ RAM. 256 ГБ SSD. 15 дюймов.", price: "139 990 ₽", image: mac },
+  { id: 14, category: "Mac",    name: "MacBook Air 13",    description: "Чип M3. 8 ГБ RAM. 256 ГБ SSD. Лёгкий.", price: "119 990 ₽", image: mac },
+  { id: 15, category: "iPad",   name: "iPad Pro 13",       description: "Чип M4. OLED. Apple Pencil Pro. 256 ГБ.", price: "149 990 ₽", image: ipad },
+  { id: 16, category: "iPad",   name: "iPad Pro 11",       description: "Чип M4. OLED. Тонкий и мощный. 256 ГБ.", price: "119 990 ₽", image: ipad },
+  { id: 17, category: "iPad",   name: "iPad Air 13",       description: "Чип M2. Retina. 128 ГБ. Wi-Fi.", price: "99 990 ₽", image: ipad },
+  { id: 18, category: "iPad",   name: "iPad Air 11",       description: "Чип M2. Retina. 128 ГБ. Wi-Fi + Cellular.", price: "79 990 ₽", image: ipad },
+  { id: 19, category: "iPad",   name: "iPad 10",           description: "Чип A14. 64 ГБ. Wi-Fi. USB-C.", price: "49 990 ₽", image: ipad },
+  { id: 20, category: "Watch",  name: "Apple Watch Ultra 2", description: "Titanium. GPS + Cellular. Для экстрима.", price: "89 990 ₽", image: iphone },
+  { id: 21, category: "Watch",  name: "Apple Watch Series 10", description: "Алюминий. GPS. OLED-дисплей.", price: "44 990 ₽", image: iphone },
+  { id: 22, category: "AirPods", name: "AirPods Pro 2",   description: "ANC. Адаптивный звук. USB-C.", price: "24 990 ₽", image: iphone },
+  { id: 23, category: "AirPods", name: "AirPods 4",       description: "Активное шумоподавление. USB-C.", price: "16 990 ₽", image: iphone },
 ];
 
-const categories = ["Все", "iPhone", "Mac", "iPad"];
+const categories = ["Все", "iPhone", "Mac", "iPad", "Watch", "AirPods"];
 
 interface CatalogProps {
   onOrder: (productName: string) => void;
@@ -66,10 +45,10 @@ export default function Catalog({ onOrder }: CatalogProps) {
   return (
     <section id="catalog" className="bg-white px-6 py-20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-2">
           Каталог
         </h2>
-        <p className="text-neutral-500 mb-10 text-lg">Оригинальная техника с официальной гарантией</p>
+        <p className="text-neutral-500 mb-10 text-lg">Оригинальная техника · Гарантия · Доставка по России</p>
 
         <div className="flex gap-3 mb-12 flex-wrap">
           {categories.map((cat) => (
